@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "roboto", sans-serif;
+}
+
+h1 {
+  font-family: "shrikhand", sans-serif;
+}
+
+h2 {
+  font-family: "shrikhand", sans-serif;
+}
+
+h3 {
+  font-family: "shrikhand", sans-serif;
+}
+
+h4 {
+  font-family: "shrikhand", sans-serif;
+}
+
+h5 {
+  font-family: "shrikhand", sans-serif;
+}
+
+h6 {
+  font-family: "shrikhand", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+header img {
+  padding: 1em 0;
+}
+header .form-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  background-color: #EAEAEA;
+}
+header .form-group form {
+  transform: translateX(15%);
+}
+header .form-group input {
+  height: 100%;
+  border: none;
+  background-color: #EAEAEA;
+  font-size: 16px;
+}
+header .form-group input:focus-within {
+  outline: none;
+}
+header .form-group ::placeholder {
+  color: #000;
+  font-weight: bold;
+}
+header .form-group:focus {
+  outline: none;
+}
+header .form-group i {
+  font-size: 1em;
+  padding-right: 15px;
+}
+
+/*# sourceMappingURL=style.css.map */

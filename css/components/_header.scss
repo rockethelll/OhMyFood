@@ -1,0 +1,47 @@
+@use "../abstract/mixins" as *;
+
+header {
+  @include flexCenter;
+  flex-direction: column;
+
+  img {
+    padding: 1em 0;
+  }
+
+  .form-group {
+    @include flexCenter;
+    height: 50px;
+    width: 100%;
+    background-color: #EAEAEA;
+
+    form {
+      transform: translateX(15%);
+    }
+
+    input {
+      height: 100%;
+      border: none;
+      background-color: #EAEAEA;
+      font-size: 16px;
+
+      &:focus-within {
+        outline: none;
+      }
+    }
+
+    ::placeholder {
+      color: #000;
+      font-weight: bold;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    i {
+      font-size: 1em;
+      padding-right: 15px;
+    }
+  }
+}
+
