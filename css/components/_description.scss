@@ -1,0 +1,31 @@
+@use '../abstract/mixins' as *;
+@use '../abstract/variables' as *;
+
+.description {
+  background-color: #F6F6F6;
+  text-align: center;
+  padding: 2rem 0;
+
+  h2 {
+    margin: 0 1rem;
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  p {
+    margin: 1rem 0;
+    padding: 0 1.5rem;
+    font-size: 18px;
+    font-weight: 300;
+    color: #666666;
+  }
+
+  button {
+    @include btnStyle;
+    margin-bottom: 2rem;
+    &:hover {
+      opacity: 0.8;
+      box-shadow: 0 0 15px $light-color-tertiary;
+    }
+  }
+}
