@@ -1,0 +1,52 @@
+@use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
+
+.working {
+  .icon {
+    color: #7E7E7E;
+    margin-right: 1.5rem;
+    font-size: 1.3rem;
+    transform: translateY(-15%);
+
+    &-color {
+      color: $color-primary;
+    }
+  }
+
+  h2 {
+    text-align: left;
+    padding: 3rem 0 1.5rem 1.2rem;
+  }
+
+  &__content {
+    @include flexCenter;
+    flex-direction: column;
+
+
+    &__row {
+      position: relative;
+      @include flexStartCenter;
+      background-color: #F6F6F6;
+      min-width: 322px;
+      height: 75px;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+      padding: 0.8rem 2rem;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+
+      div {
+        @include flexCenter;
+        font-size: 14px;
+        position: absolute;
+        color: white;
+        background-color: $color-primary;
+        width: 1.3rem;
+        height: 1.3rem;
+        border-radius: 50%;
+        left: 0;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}
