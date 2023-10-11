@@ -6,6 +6,12 @@
   align-items: center;
 }
 
+@mixin flexStartCenter {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
 @mixin btnStyle {
   margin-top: 1rem;
   width: 218px;
