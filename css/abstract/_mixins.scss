@@ -1,5 +1,27 @@
+@use 'variables' as *;
+
 @mixin flexCenter {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@mixin btnStyle {
+  margin-top: 1rem;
+  width: 218px;
+  height: 50px;
+  border-radius: 25px;
+  border: none;
+  background: $color-gradient;
+  color: white;
+  font-weight: 500;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+@mixin btnHover {
+  opacity: 0.8;
+  box-shadow: 0 0 15px $color-tertiary;
 }
