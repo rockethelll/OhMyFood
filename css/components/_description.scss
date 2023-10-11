@@ -24,8 +24,7 @@
     @include btnStyle;
     margin-bottom: 2rem;
     &:hover {
-      opacity: 0.8;
-      box-shadow: 0 0 15px $light-color-tertiary;
+      @include btnHover;
     }
   }
 }
