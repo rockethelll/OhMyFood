@@ -31,3 +31,10 @@
   opacity: 0.8;
   box-shadow: 0 0 15px $color-tertiary;
 }
+
+@mixin iconStyle {
+  font-family: "Font Awesome 5 Free";
+  vertical-align: middle;
+  font-weight: 900;
+  font-size: 13px;
+}

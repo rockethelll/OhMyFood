@@ -1,0 +1,50 @@
+@use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
+
+footer {
+  background: #353535;
+  padding: 1.4rem 1.5rem;
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
+  h2 {
+    font-family: "shrikhand", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+
+  .participate {
+    color: white;
+
+    :nth-child(1) {
+      ::before {
+        @include iconStyle;
+        content: "\f2e7";
+        padding-right: 15px;
+      }
+    }
+
+    :nth-child(2) {
+      ::before {
+        @include iconStyle;
+        content: "\f4c4";
+        padding-right: 10px;
+      }
+    }
+  }
+
+  .participate li,
+  .contact-legal li:not(:last-child) {
+    margin-bottom: 7px;
+  }
+}
