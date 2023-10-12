@@ -11,12 +11,6 @@ html {
   scroll-behavior: smooth;
 }
 
-h1 {
-  font-family: "shrikhand", sans-serif;
-  font-weight: 500;
-  font-size: clamp(2rem, 2vw, 3rem);
-}
-
 header {
   display: flex;
   justify-content: center;
@@ -63,7 +57,7 @@ header .form-group i {
   text-align: center;
   padding: 2rem 0;
 }
-.description h2 {
+.description h1 {
   margin: 0 1rem;
   font-size: 24px;
   font-weight: 700;
@@ -113,6 +107,7 @@ header .form-group i {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin: 0 2rem;
 }
 .working__content__row {
   position: relative;
@@ -120,7 +115,8 @@ header .form-group i {
   justify-content: start;
   align-items: center;
   background-color: #F6F6F6;
-  min-width: 322px;
+  width: 100%;
+  max-width: 700px;
   height: 75px;
   border-radius: 20px;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
@@ -141,6 +137,138 @@ header .form-group i {
   border-radius: 50%;
   left: 0;
   transform: translateX(-50%);
+}
+
+.restaurants {
+  background-color: #F6F6F6;
+}
+.restaurants .restaurants__cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 4rem;
+}
+.restaurants .restaurants__cards a {
+  text-decoration: none;
+  color: black;
+  width: 100%;
+  max-width: 650px;
+  height: 300px;
+}
+.restaurants h2 {
+  text-align: left;
+  padding: 3rem 0 1.5rem 1.2rem;
+}
+.restaurants .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+  width: 90%;
+  max-width: 650px;
+  background-color: white;
+  margin: 0 auto;
+  border-radius: 15px;
+}
+.restaurants .card:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.restaurants .card img {
+  object-fit: cover;
+  object-position: center center;
+  width: 100%;
+  height: 70%;
+  border-radius: 15px 15px 0 0;
+}
+.restaurants .card .card__new {
+  position: absolute;
+  color: #278870;
+  background-color: #99E2D0;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+  padding: 8px 14px;
+  font-size: 14px;
+  border-radius: 2px;
+  font-weight: 500;
+  top: 20px;
+  right: 20px;
+}
+.restaurants .card .card__content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 30%;
+}
+.restaurants .card .card__content__text {
+  width: 100%;
+  margin: 1rem;
+  line-height: 1.7rem;
+}
+.restaurants .card .card__content__text p {
+  font-size: 17px;
+}
+.restaurants .card .card__content__like {
+  margin: 1rem 2rem 2rem 0;
+  width: 10%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.restaurants .card .heart-hover {
+  display: none;
+}
+.restaurants .card i {
+  font-size: 21px;
+}
+.restaurants .card i:hover .heart {
+  display: none;
+}
+.restaurants .card i:hover .heart-hover {
+  display: block;
+}
+
+footer {
+  background: #353535;
+  padding: 1.4rem 1.5rem;
+}
+footer li {
+  list-style: none;
+}
+footer a {
+  text-decoration: none;
+  color: white;
+}
+footer h2 {
+  font-family: "shrikhand", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+footer .participate {
+  color: white;
+}
+footer .participate :nth-child(1) ::before {
+  font-family: "Font Awesome 5 Free";
+  vertical-align: middle;
+  font-weight: 900;
+  font-size: 13px;
+  content: "\f2e7";
+  padding-right: 15px;
+}
+footer .participate :nth-child(2) ::before {
+  font-family: "Font Awesome 5 Free";
+  vertical-align: middle;
+  font-weight: 900;
+  font-size: 13px;
+  content: "\f4c4";
+  padding-right: 10px;
+}
+footer .participate li,
+footer .contact-legal li:not(:last-child) {
+  margin-bottom: 7px;
 }
 
 /*# sourceMappingURL=style.css.map */
