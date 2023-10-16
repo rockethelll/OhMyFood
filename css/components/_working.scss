@@ -4,8 +4,9 @@
 // Mobile version
 
 .working {
+  background-color: #fff;
   @include flexCenter;
-  padding: 3rem 1rem;
+  padding: 2rem 1rem;
 
   .container {
     width: 100%;
@@ -64,8 +65,9 @@
 
 @media screen and (min-width: 1300px) {
   .working {
-    max-width: 1200px;
+    //max-width: 1200px;
     margin: 0 auto;
+
 
     .container {
       max-width: 1100px;

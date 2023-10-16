@@ -5,7 +5,7 @@
 
 .restaurants {
   @include flexCenter;
-  padding: 3rem 1rem;
+  padding: 2rem 1rem;
   background-color: #F6F6F6;
 
   .container {
@@ -14,7 +14,7 @@
   }
 
   .restaurants__cards {
-    padding-bottom: 3rem;
+    padding-bottom: 2rem;
 
     a {
       text-decoration: none;
@@ -87,8 +87,6 @@
       align-items: center;
     }
 
-
-
     i {
       font-size: 21px;
 
@@ -104,3 +102,37 @@
 }
 
 // Tablet version
+
+@media screen and (min-width: 1300px) {
+  .restaurants {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+
+    .container {
+      max-width: 1100px;
+      width: 100%;
+    }
+
+    .restaurants__cards {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding-bottom: 0;
+
+      a {
+        max-width: 500px;
+        width: 47%;
+      }
+
+      .card {
+        max-width: 500px;
+        padding: 0;
+        margin: 0 0 3rem 0;
+      }
+    }
+
+  }
+
+}
