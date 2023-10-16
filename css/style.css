@@ -315,7 +315,7 @@ main img {
   font-family: "shrikhand", sans-serif;
   font-weight: 400;
   font-size: clamp(1.4rem, 20px + 2vw, 3rem);
-  padding: 2rem 0;
+  padding: 2rem 0 1rem 0;
 }
 .restaurant i {
   font-size: clamp(1.4rem, 20px + 2vw, 3rem);
@@ -327,6 +327,76 @@ main img {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   cursor: pointer;
+}
+.restaurant .container {
+  padding: 1rem;
+}
+.restaurant .container .container__title {
+  border-bottom: 4px solid #99E2D0;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+}
+.restaurant .container .container__title h2 {
+  font-size: 16px;
+  font-weight: 300;
+  padding-bottom: 10px;
+}
+.restaurant .container__content {
+  position: relative;
+  padding: 1rem;
+  border-radius: 15px;
+  background-color: #fff;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  margin-top: 1rem;
+  line-height: 1.5rem;
+  overflow: hidden;
+}
+.restaurant .container__content:hover {
+  cursor: pointer;
+}
+.restaurant .container__content:hover .container__content__selected {
+  transform: translateX(0);
+  visibility: visible;
+}
+.restaurant .container__content:hover .price {
+  margin-right: 60px;
+  transition: all 0.6s linear;
+}
+.restaurant .container__content h3 {
+  font-size: 18px;
+  font-weight: 500;
+}
+.restaurant .container__content .container__content__description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 300;
+}
+.restaurant .container__content .container__content__description .price {
+  font-weight: bold;
+  transition: all 0.6s linear;
+}
+.restaurant .container__content .container__content__selected {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  height: 100%;
+  width: 60px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 0 15px 15px 0;
+  transform: translateX(50px);
+  visibility: hidden;
+  transition: all 0.6s linear;
+}
+.restaurant .container__content .container__content__selected i {
+  color: #fff;
+  font-size: 2rem;
+  margin: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
