@@ -1,5 +1,7 @@
 @use "../abstract/mixins" as *;
 
+// Mobile version
+
 header {
   @include flexCenter;
   flex-direction: column;
@@ -44,4 +46,6 @@ header {
     }
   }
 }
+
+// Tablet version
 

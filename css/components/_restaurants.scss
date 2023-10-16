@@ -1,13 +1,20 @@
 @use '../abstract/mixins' as *;
 @use '../abstract/variables' as *;
 
+// Mobile version
+
 .restaurants {
+  @include flexCenter;
+  padding: 3rem 1rem;
   background-color: #F6F6F6;
 
+  .container {
+    width: 100%;
+    max-width: 700px;
+  }
+
   .restaurants__cards {
-    @include flexCenter;
-    flex-direction: column;
-    padding-bottom: 4rem;
+    padding-bottom: 3rem;
 
     a {
       text-decoration: none;
@@ -19,16 +26,11 @@
   }
 
   h2 {
-    text-align: left;
-    padding: 3rem 0 1.5rem 1.2rem;
+    padding: 1.5rem 0;
   }
 
   .card {
-    @include flexCenter;
-    position: relative;
-    flex-direction: column;
-    width: 90%;
-    max-width: 650px;
+    width: 100%;
     background-color: white;
     margin: 0 auto;
     border-radius: 15px;
@@ -41,7 +43,8 @@
       object-fit: cover;
       object-position: center center;
       width: 100%;
-      height: 70%;
+      transform-origin: 0 50%;
+      height: 200px;
       border-radius: 15px 15px 0 0;
     }
 
@@ -91,15 +94,15 @@
       font-size: 21px;
 
       &:hover {
-        .heart {
-          display: none;
-        }
-
-        .heart-hover {
-          display: block;
-        }
-
+        font-weight: 900;
+        background: $color-gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity: 1;
+        cursor: pointer;
       }
     }
   }
 }
+
+// Tablet version

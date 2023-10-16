@@ -1,6 +1,8 @@
 @use '../abstract/variables' as *;
 @use '../abstract/mixins' as *;
 
+// Mobile version
+
 footer {
   background: #353535;
   padding: 1.4rem 1.5rem;
@@ -48,3 +50,5 @@ footer {
     margin-bottom: 7px;
   }
 }
+
+// Tablet version

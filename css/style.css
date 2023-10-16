@@ -89,6 +89,18 @@ header .form-group i {
   box-shadow: 0 0 15px #99E2D0;
 }
 
+.working {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1rem;
+}
+.working .container {
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+}
 .working .icon {
   color: #7E7E7E;
   margin-right: 1.5rem;
@@ -99,15 +111,10 @@ header .form-group i {
   color: #9356DC;
 }
 .working h2 {
-  text-align: left;
-  padding: 3rem 0 1.5rem 1.2rem;
+  padding: 1.5rem 0;
 }
 .working__content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin: 0 2rem;
+  margin: 0 0.5rem;
 }
 .working__content__row {
   position: relative;
@@ -115,8 +122,6 @@ header .form-group i {
   justify-content: start;
   align-items: center;
   background-color: #F6F6F6;
-  width: 100%;
-  max-width: 700px;
   height: 75px;
   border-radius: 20px;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
@@ -140,14 +145,18 @@ header .form-group i {
 }
 
 .restaurants {
-  background-color: #F6F6F6;
-}
-.restaurants .restaurants__cards {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  padding-bottom: 4rem;
+  padding: 3rem 1rem;
+  background-color: #F6F6F6;
+}
+.restaurants .container {
+  width: 100%;
+  max-width: 700px;
+}
+.restaurants .restaurants__cards {
+  padding-bottom: 3rem;
 }
 .restaurants .restaurants__cards a {
   text-decoration: none;
@@ -157,17 +166,10 @@ header .form-group i {
   height: 300px;
 }
 .restaurants h2 {
-  text-align: left;
-  padding: 3rem 0 1.5rem 1.2rem;
+  padding: 1.5rem 0;
 }
 .restaurants .card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  flex-direction: column;
-  width: 90%;
-  max-width: 650px;
+  width: 100%;
   background-color: white;
   margin: 0 auto;
   border-radius: 15px;
@@ -179,7 +181,8 @@ header .form-group i {
   object-fit: cover;
   object-position: center center;
   width: 100%;
-  height: 70%;
+  transform-origin: 0 50%;
+  height: 200px;
   border-radius: 15px 15px 0 0;
 }
 .restaurants .card .card__new {
@@ -221,11 +224,13 @@ header .form-group i {
 .restaurants .card i {
   font-size: 21px;
 }
-.restaurants .card i:hover .heart {
-  display: none;
-}
-.restaurants .card i:hover .heart-hover {
-  display: block;
+.restaurants .card i:hover {
+  font-weight: 900;
+  background: linear-gradient(to bottom, #FF79DA, #a16be0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 1;
+  cursor: pointer;
 }
 
 footer {
