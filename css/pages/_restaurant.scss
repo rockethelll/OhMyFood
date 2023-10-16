@@ -26,6 +26,7 @@
 
 main {
   margin: 0 auto;
+  background-color: #F6F6F6;
 
   img {
     width: 100%;
@@ -51,12 +52,11 @@ main {
 
   i {
     font-size: clamp(1.4rem, 20px + 2vw, 3rem);
-    //font-size: 28px;
     margin-left: 2rem;
 
     &:hover {
-      font-weight: 900;
       background: $color-gradient;
+      font-weight: 900;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       cursor: pointer;
@@ -64,8 +64,7 @@ main {
   }
 
   .container {
-    padding: 1rem;
-
+    padding: 1rem 1rem 2rem;
 
     .container__title {
       border-bottom: 4px solid $color-tertiary;
@@ -93,10 +92,12 @@ main {
 
     &:hover {
       cursor: pointer;
+
       .container__content__selected {
         transform: translateX(0);
         visibility: visible;
       }
+
       .price {
         margin-right: 60px;
         transition: all 0.6s linear;
@@ -140,6 +141,20 @@ main {
         margin: 0;
       }
 
+    }
+  }
+
+  .submit {
+    @include flexCenter;
+    padding-top: 1rem;
+
+    button {
+      @include btnStyle;
+      margin: 0 auto;
+
+      &:hover {
+        @include btnHover;
+      }
     }
   }
 }
