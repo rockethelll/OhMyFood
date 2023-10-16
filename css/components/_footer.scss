@@ -52,3 +52,41 @@ footer {
 }
 
 // Tablet version
+
+@media screen and (min-width: 800px) {
+  footer {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    padding: 30px 25px;
+    height: 115px;
+
+    h2 {
+      order: 2;
+      margin-bottom: 0;
+      padding: 0;
+    }
+
+    .lists {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .participate,
+      .contact-legal {
+        display: flex;
+        justify-content: center;
+        //align-items: center;
+        margin-right: 2rem;
+
+        li {
+          margin: 0;
+          padding-right: 1rem;
+        }
+      }
+
+    }
+
+  }
+
+}

@@ -144,6 +144,25 @@ html {
   transform: translateX(-50%);
 }
 
+@media screen and (min-width: 1300px) {
+  .working {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .working .container {
+    max-width: 1100px;
+    width: 100%;
+  }
+  .working .working__content {
+    display: flex;
+  }
+  .working .working__content__row {
+    width: 100%;
+  }
+  .working .working__content__row:not(:last-child) {
+    margin-right: 2rem;
+  }
+}
 .restaurants {
   display: flex;
   justify-content: center;
@@ -273,6 +292,36 @@ footer .contact-legal li:not(:last-child) {
   margin-bottom: 7px;
 }
 
+@media screen and (min-width: 800px) {
+  footer {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    padding: 30px 25px;
+    height: 115px;
+  }
+  footer h2 {
+    order: 2;
+    margin-bottom: 0;
+    padding: 0;
+  }
+  footer .lists {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .lists .participate,
+  footer .lists .contact-legal {
+    display: flex;
+    justify-content: center;
+    margin-right: 2rem;
+  }
+  footer .lists .participate li,
+  footer .lists .contact-legal li {
+    margin: 0;
+    padding-right: 1rem;
+  }
+}
 .header-restaurant {
   padding: 14px 0;
   display: flex;
