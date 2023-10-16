@@ -2,12 +2,12 @@
 
 // Mobile version
 
-header {
+.header {
   @include flexCenter;
   flex-direction: column;
 
   img {
-    padding: 1em 0;
+    margin: 1em 0;
   }
 
   .form-group {

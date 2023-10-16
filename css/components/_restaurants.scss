@@ -31,6 +31,7 @@
 
   .card {
     width: 100%;
+    position: relative;
     background-color: white;
     margin: 0 auto;
     border-radius: 15px;
@@ -86,9 +87,7 @@
       align-items: center;
     }
 
-    .heart-hover {
-      display: none;
-    }
+
 
     i {
       font-size: 21px;
@@ -98,7 +97,6 @@
         background: $color-gradient;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        opacity: 1;
         cursor: pointer;
       }
     }

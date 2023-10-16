@@ -1,0 +1,65 @@
+@use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
+
+.header-restaurant {
+  padding: 14px 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 70px;
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 70px;
+    padding: 1em;
+    transform: translate(-50%, -50%);
+  }
+
+  i {
+    font-size: 2em;
+    color: #353535;
+    margin: 0 42px 0 1rem;
+  }
+}
+
+main {
+  margin: 0 auto;
+
+  img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+}
+
+.restaurant {
+  margin: 0 auto;
+  background-color: #F6F6F6;
+  max-width: 1055px;
+  border-radius: 40px 40px 0 0;
+  transform: translateY(-50px);
+
+  h1 {
+    text-align: center;
+    font-family: "shrikhand", sans-serif;
+    font-weight: 400;
+    font-size: clamp(1.4rem, 20px + 2vw, 3rem);
+    padding: 2rem 0;
+  }
+
+  i {
+    //font-size: 21px;
+    font-size: clamp(1.4rem, 20px + 2vw, 3rem);
+    margin-left: 2rem;
+
+    &:hover {
+      font-weight: 900;
+      background: $color-gradient;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      cursor: pointer;
+    }
+  }
+}
