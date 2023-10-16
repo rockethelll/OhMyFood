@@ -53,6 +53,7 @@ main {
   i {
     font-size: clamp(1.4rem, 20px + 2vw, 3rem);
     margin-left: 2rem;
+    padding: 2px;
 
     &:hover {
       background: $color-gradient;

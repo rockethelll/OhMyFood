@@ -321,6 +321,7 @@ main img {
 .restaurant i {
   font-size: clamp(1.4rem, 20px + 2vw, 3rem);
   margin-left: 2rem;
+  padding: 2px;
 }
 .restaurant i:hover {
   background: linear-gradient(to bottom, #FF79DA, #a16be0);
