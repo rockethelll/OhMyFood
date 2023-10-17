@@ -19,28 +19,28 @@
   p {
     font-family: "shrikhand", sans-serif;
     font-weight: 400;
-    font-size: clamp(1.4rem, 20px + 2vw, 3rem);
+    font-size: 3rem;
     margin-bottom: 2rem;
   }
 
   .wheel {
     @include flexCenter;
-    width: 20vw;
-    height: 20vw;
+    width: 120px;
+    height: 120px;
     position: relative;
 
     span {
       color: $color-primary;
       font-weight: bold;
-      font-size: clamp(1.2rem, 16px + 2vw, 2.2rem);
+      font-size: 1.4rem;
       animation: flash 2s alternate ease-in-out 2;
     }
   }
 
   .wheel::before {
     content: "";
-    width: 20vw;
-    height: 20vw;
+    width: 120px;
+    height: 120px;
     position: absolute;
     border-radius: 50%;
     border: 12px solid;
@@ -51,9 +51,12 @@
 
 @media screen and (min-width: 768px) {
   .loader {
+    span {
+      font-size: 2rem;
+    }
     .wheel, .wheel::before {
-    width: 18vw;
-    height: 18vw;
+      width: 160px;
+      height: 160px;
     }
   }
 }

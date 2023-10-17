@@ -365,27 +365,27 @@ footer .contact-legal li:not(:last-child) {
 .loader p {
   font-family: "shrikhand", sans-serif;
   font-weight: 400;
-  font-size: clamp(1.4rem, 20px + 2vw, 3rem);
+  font-size: 3rem;
   margin-bottom: 2rem;
 }
 .loader .wheel {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 20vw;
-  height: 20vw;
+  width: 120px;
+  height: 120px;
   position: relative;
 }
 .loader .wheel span {
   color: #9356DC;
   font-weight: bold;
-  font-size: clamp(1.2rem, 16px + 2vw, 2.2rem);
+  font-size: 1.4rem;
   animation: flash 2s alternate ease-in-out 2;
 }
 .loader .wheel::before {
   content: "";
-  width: 20vw;
-  height: 20vw;
+  width: 120px;
+  height: 120px;
   position: absolute;
   border-radius: 50%;
   border: 12px solid;
@@ -394,9 +394,12 @@ footer .contact-legal li:not(:last-child) {
 }
 
 @media screen and (min-width: 768px) {
+  .loader span {
+    font-size: 2rem;
+  }
   .loader .wheel, .loader .wheel::before {
-    width: 18vw;
-    height: 18vw;
+    width: 160px;
+    height: 160px;
   }
 }
 @keyframes spin {
