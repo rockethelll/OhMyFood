@@ -251,7 +251,6 @@ html {
 
 @media screen and (min-width: 1300px) {
   .restaurants {
-    max-width: 1200px;
     margin: 0 auto;
     padding: 0;
   }
@@ -347,6 +346,80 @@ footer .contact-legal li:not(:last-child) {
   footer .lists .contact-legal li {
     margin: 0;
     padding-right: 1rem;
+  }
+}
+.loader {
+  opacity: 0;
+  z-index: -5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-color: #e0dada;
+  animation: displayLoader 3s cubic-bezier(1, -0.01, 0.63, 0.91);
+}
+.loader p {
+  font-family: "shrikhand", sans-serif;
+  font-weight: 400;
+  font-size: clamp(1.4rem, 20px + 2vw, 3rem);
+  margin-bottom: 2rem;
+}
+.loader .wheel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10vw;
+  height: 10vw;
+  position: relative;
+}
+.loader .wheel span {
+  color: #9356DC;
+  font-weight: bold;
+  font-size: 1.2rem;
+  animation: flash 2s alternate ease-in-out 2;
+}
+.loader .wheel::before {
+  content: "";
+  width: 10vw;
+  height: 10vw;
+  position: absolute;
+  border-radius: 50%;
+  border: 12px solid;
+  border-color: #9356DC transparent #9356DC transparent;
+  animation: spin 2s ease-in-out 2;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes flash {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes displayLoader {
+  0%, 99% {
+    z-index: 10;
+  }
+  0% {
+    opacity: 1;
+  }
+  100% {
+    z-index: -5;
+    opacity: 0;
   }
 }
 .header-restaurant {

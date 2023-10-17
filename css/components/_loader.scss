@@ -1,0 +1,82 @@
+@use '../abstract/mixins' as *;
+@use '../abstract/variables' as *;
+
+.loader {
+  opacity: 0;
+  z-index: -5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  @include flexCenter;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-color: #e0dada;
+  animation: displayLoader 3s cubic-bezier(1, -0.01, .63, .91);
+
+  p {
+    font-family: "shrikhand", sans-serif;
+    font-weight: 400;
+    font-size: clamp(1.4rem, 20px + 2vw, 3rem);
+    margin-bottom: 2rem;
+  }
+
+  .wheel {
+    @include flexCenter;
+    width: 10vw;
+    height: 10vw;
+    position: relative;
+
+    span {
+      color: $color-primary;
+      font-weight: bold;
+      font-size: 1.2rem;
+      animation: flash 2s alternate ease-in-out 2;
+    }
+  }
+
+  .wheel::before {
+    content: "";
+    width: 10vw;
+    height: 10vw;
+    position: absolute;
+    border-radius: 50%;
+    border: 12px solid;
+    border-color: $color-primary transparent $color-primary transparent;
+    animation: spin 2s ease-in-out 2;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes flash {
+  0% {
+    opacity: 0.2;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes displayLoader {
+  0%, 99% {
+    z-index: 10;
+  }
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    z-index: -5;
+    opacity: 0;
+  }
+}

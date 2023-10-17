@@ -97,6 +97,7 @@ main {
 
     &:hover {
       cursor: pointer;
+
       h3 {
         margin-right: 60px;
       }
@@ -154,7 +155,6 @@ main {
         font-size: 2rem;
         margin: 0;
       }
-
     }
   }
 
@@ -181,6 +181,7 @@ main {
     opacity: 0;
     transform: translateY(40px);
   }
+  
   to {
     opacity: 1;
     transform: translateY(0);

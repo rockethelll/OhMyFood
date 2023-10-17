@@ -1,8 +1,6 @@
 @use '../abstract/mixins' as *;
 @use '../abstract/variables' as *;
 
-// Mobile version
-
 .description {
   background-color: #F6F6F6;
   text-align: center;
@@ -25,12 +23,12 @@
   button {
     @include btnStyle;
     margin-bottom: 2rem;
+
     &:hover {
       @include btnHover;
     }
   }
 }
 
-// Tablet version
 
 
