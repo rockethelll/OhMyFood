@@ -443,8 +443,11 @@ footer .contact-legal li:not(:last-child) {
   top: 50%;
   left: 50%;
   height: 70px;
-  padding: 1em;
+  padding: 1em 0;
   transform: translate(-50%, -50%);
+}
+.header-restaurant a {
+  width: 60px;
 }
 .header-restaurant i {
   font-size: 2em;
@@ -593,6 +596,11 @@ main img {
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.35);
 }
 
+@media screen and (min-width: 768px) {
+  .header-restaurant {
+    padding: 14px 22px;
+  }
+}
 /* Animation fadeInUp */
 @keyframes fadeInUp {
   from {

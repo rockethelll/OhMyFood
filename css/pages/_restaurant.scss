@@ -15,8 +15,12 @@
     top: 50%;
     left: 50%;
     height: 70px;
-    padding: 1em;
+    padding: 1em 0;
     transform: translate(-50%, -50%);
+  }
+
+  a {
+    width: 60px;
   }
 
   i {
@@ -173,6 +177,13 @@ main {
   }
 }
 
+// Tablet version
+
+@media screen and (min-width: 768px) {
+  .header-restaurant {
+    padding: 14px 22px;
+  }
+}
 
 /* Animation fadeInUp */
 
@@ -181,7 +192,7 @@ main {
     opacity: 0;
     transform: translateY(40px);
   }
-  
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -209,6 +220,3 @@ main {
 .restaurant .container:nth-child(4) {
   animation: fadeInUp 0.5s ease-in-out 0.8s forwards;
 }
-
-
-
