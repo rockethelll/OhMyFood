@@ -38,13 +38,13 @@ main {
 }
 
 .restaurant {
+  transform: translateY(-40px);
   margin: 0 auto -40px;
-  // -40px to compensate for the translateY(-40px) in the .container bottom
+  // -40px to compensate the translateY(-40px)
   padding-bottom: 3rem;
   background-color: #F6F6F6;
   max-width: 1100px;
   border-radius: 40px 40px 0 0;
-  transform: translateY(-40px);
 
   h1 {
     text-align: center;
@@ -54,7 +54,7 @@ main {
     padding: 2rem 0 1rem 0;
   }
 
-  i {
+  .fa-heart {
     font-size: clamp(1.4rem, 20px + 2vw, 3rem);
     margin-left: 2rem;
     padding: 2px;
@@ -97,6 +97,12 @@ main {
 
     &:hover {
       cursor: pointer;
+      
+      p:nth-child(1) {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
 
       .container__content__selected {
         transform: translateX(0);
@@ -163,11 +169,3 @@ main {
     }
   }
 }
-
-// Tablet version
-
-//@media screen and (min-width: 1100px) {
-//  main {
-//    background-color: #fff;
-//  }
-//}

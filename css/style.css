@@ -86,7 +86,7 @@ html {
 }
 .description button:hover {
   opacity: 0.8;
-  box-shadow: 0 0 15px #99E2D0;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.35);
 }
 
 .working {
@@ -381,12 +381,12 @@ main img {
 }
 
 .restaurant {
+  transform: translateY(-40px);
   margin: 0 auto -40px;
   padding-bottom: 3rem;
   background-color: #F6F6F6;
   max-width: 1100px;
   border-radius: 40px 40px 0 0;
-  transform: translateY(-40px);
 }
 .restaurant h1 {
   text-align: center;
@@ -395,12 +395,12 @@ main img {
   font-size: clamp(1.4rem, 20px + 2vw, 3rem);
   padding: 2rem 0 1rem 0;
 }
-.restaurant i {
+.restaurant .fa-heart {
   font-size: clamp(1.4rem, 20px + 2vw, 3rem);
   margin-left: 2rem;
   padding: 2px;
 }
-.restaurant i:hover {
+.restaurant .fa-heart:hover {
   background: linear-gradient(to bottom, #FF79DA, #a16be0);
   font-weight: 900;
   -webkit-background-clip: text;
@@ -433,6 +433,11 @@ main img {
 }
 .restaurant .container__content:hover {
   cursor: pointer;
+}
+.restaurant .container__content:hover p:nth-child(1) {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .restaurant .container__content:hover .container__content__selected {
   transform: translateX(0);
@@ -500,7 +505,7 @@ main img {
 }
 .restaurant .submit button:hover {
   opacity: 0.8;
-  box-shadow: 0 0 15px #99E2D0;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.35);
 }
 
 /*# sourceMappingURL=style.css.map */
