@@ -349,8 +349,8 @@ footer .contact-legal li:not(:last-child) {
   }
 }
 .loader {
-  opacity: 0;
-  z-index: -5;
+  opacity: 1;
+  z-index: 10;
   position: fixed;
   top: 0;
   left: 0;
@@ -361,7 +361,6 @@ footer .contact-legal li:not(:last-child) {
   height: 100%;
   width: 100%;
   background-color: #e0dada;
-  animation: displayLoader 3s cubic-bezier(1, -0.01, 0.63, 0.91);
 }
 .loader p {
   font-family: "shrikhand", sans-serif;
@@ -373,20 +372,20 @@ footer .contact-legal li:not(:last-child) {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 10vw;
-  height: 10vw;
+  width: 20vw;
+  height: 20vw;
   position: relative;
 }
 .loader .wheel span {
   color: #9356DC;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: clamp(1.2rem, 16px + 2vw, 2.2rem);
   animation: flash 2s alternate ease-in-out 2;
 }
 .loader .wheel::before {
   content: "";
-  width: 10vw;
-  height: 10vw;
+  width: 20vw;
+  height: 20vw;
   position: absolute;
   border-radius: 50%;
   border: 12px solid;
@@ -394,6 +393,12 @@ footer .contact-legal li:not(:last-child) {
   animation: spin 2s ease-in-out 2;
 }
 
+@media screen and (min-width: 768px) {
+  .loader .wheel, .loader .wheel::before {
+    width: 18vw;
+    height: 18vw;
+  }
+}
 @keyframes spin {
   0% {
     transform: rotate(0deg);
