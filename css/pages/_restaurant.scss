@@ -1,6 +1,8 @@
 @use '../abstract/variables' as *;
 @use '../abstract/mixins' as *;
 
+// Mobile version
+
 .header-restaurant {
   padding: 14px 0;
   display: flex;
@@ -26,7 +28,7 @@
 
 main {
   margin: 0 auto;
-  background-color: #F6F6F6;
+  background-color: #fff;
 
   img {
     width: 100%;
@@ -36,11 +38,13 @@ main {
 }
 
 .restaurant {
-  margin: 0 auto;
+  margin: 0 auto -40px;
+  // -40px to compensate for the translateY(-40px) in the .container bottom
+  padding-bottom: 3rem;
   background-color: #F6F6F6;
-  max-width: 1055px;
+  max-width: 1100px;
   border-radius: 40px 40px 0 0;
-  transform: translateY(-50px);
+  transform: translateY(-40px);
 
   h1 {
     text-align: center;
@@ -159,3 +163,11 @@ main {
     }
   }
 }
+
+// Tablet version
+
+//@media screen and (min-width: 1100px) {
+//  main {
+//    background-color: #fff;
+//  }
+//}

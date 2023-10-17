@@ -372,7 +372,7 @@ footer .contact-legal li:not(:last-child) {
 
 main {
   margin: 0 auto;
-  background-color: #F6F6F6;
+  background-color: #fff;
 }
 main img {
   width: 100%;
@@ -381,11 +381,12 @@ main img {
 }
 
 .restaurant {
-  margin: 0 auto;
+  margin: 0 auto -40px;
+  padding-bottom: 3rem;
   background-color: #F6F6F6;
-  max-width: 1055px;
+  max-width: 1100px;
   border-radius: 40px 40px 0 0;
-  transform: translateY(-50px);
+  transform: translateY(-40px);
 }
 .restaurant h1 {
   text-align: center;
