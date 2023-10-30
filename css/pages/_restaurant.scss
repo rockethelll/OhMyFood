@@ -58,17 +58,38 @@ main {
     padding: 2rem 0 1rem 0;
   }
 
-  .fa-heart {
-    font-size: clamp(1.4rem, 20px + 2vw, 3rem);
-    margin-left: 2rem;
-    padding: 2px;
+  .heart {
+    position: relative;
 
-    &:hover {
+    .fa-heart {
+      font-size: clamp(1.4rem, 20px + 2vw, 3rem);
+      margin-left: 2rem;
+      padding: 2px;
+      cursor: pointer;
+      position: absolute;
+    }
+
+    .fa-regular {
+      transition: opacity 0.6s ease-out;
+    }
+
+    .full {
+      opacity: 0;
       background: $color-gradient;
       font-weight: 900;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      cursor: pointer;
+      transition: all 0.6s ease-out;
+    }
+
+    &:hover {
+      .fa-regular {
+        opacity: 0;
+      }
+
+      .full {
+        opacity: 1;
+      }
     }
   }
 
