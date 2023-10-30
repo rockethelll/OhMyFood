@@ -500,8 +500,8 @@ main img {
   position: relative;
 }
 .restaurant .heart .fa-heart {
-  font-size: clamp(1.4rem, 20px + 2vw, 3rem);
-  margin-left: 2rem;
+  font-size: clamp(1.2rem, 19px + 2vw, 3rem);
+  margin-left: 4vw;
   padding: 2px;
   cursor: pointer;
   position: absolute;
@@ -547,16 +547,16 @@ main img {
   line-height: 1.5rem;
   overflow: hidden;
 }
+.restaurant .container__content h3, .restaurant .container__content p:nth-child(1) {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .restaurant .container__content:hover {
   cursor: pointer;
 }
 .restaurant .container__content:hover h3 {
   margin-right: 60px;
-}
-.restaurant .container__content:hover h3, .restaurant .container__content:hover p:nth-child(1) {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 .restaurant .container__content:hover .container__content__selected {
   transform: translateX(0);

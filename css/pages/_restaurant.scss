@@ -62,8 +62,8 @@ main {
     position: relative;
 
     .fa-heart {
-      font-size: clamp(1.4rem, 20px + 2vw, 3rem);
-      margin-left: 2rem;
+      font-size: clamp(1.2rem, 19px + 2vw, 3rem);
+      margin-left: 4vw;
       padding: 2px;
       cursor: pointer;
       position: absolute;
@@ -120,17 +120,17 @@ main {
     line-height: 1.5rem;
     overflow: hidden;
 
+    h3, p:nth-child(1) {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
     &:hover {
       cursor: pointer;
 
       h3 {
         margin-right: 60px;
-      }
-
-      h3, p:nth-child(1) {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
       }
 
       .container__content__selected {
